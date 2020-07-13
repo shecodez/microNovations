@@ -1,50 +1,52 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: SECURE CLOUD SOLUTIONS
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: Customized IT services for your business
+subheading: Enterprise grade and Tailor-made for your business
 mainpitch:
-  title: Why Kaldi
+  title: Why microNovations
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+    microNovations is a full-service IT consulting firm based in Middle Georgia.
+    We offer specialized, fully customizable IT solutions for small to
+    medium-sized businesses. Our engineers are more than happy to assist you in
+    making the right choices for your business.
+description: A full-service IT consulting firm at your service
 intro:
   blurbs:
     - image: /img/coffee.png
-      text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+      text: >-
+        Getting reliable results from a network system requires in-depth
+        planning, installation, security, and then management. Our team of IT
+        experts understands every aspect of network communications —from
+        planning to implementation and everything in-between.
+
+
+        Local Area and Wide Area Network Design & Support
+
+        Secure Remote Access and Management Solutions
+
+        Wired and Wireless Network Design & Installations
     - image: /img/coffee-gear.png
-      text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
+      text: >-
+        We listen, learn, and consider our client’s business focus, their
+        budgets & resources, and future growth plans, before recommending or
+        implementing a technology solution.
+
+
+        There are many hosted service providers willing to move your services and data to the cloud but we want to make sure it makes sense for your business from a technical, financial, and security standpoint.
+
+         Hosted Microsoft Exchange Email, Archiving and Compliance Services
+         Hosted Voice over IP (VoIP), Tele & Video Conferencing Services
+         Managed IT Workstation/Server/Network Support
+         Secure Online/Offsite Backup Services (Encryption In Transit and At Rest
+         Website Development & Management Services
     - image: /img/tutorials.png
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+      text: The quality, performance, and security of your network can be vastly
+        improved with our technology audits. Working together with your in-house
+        team, we'll analyze your IT infrastructure in order to identify
+        vulnerabilities. Then we set priorities that match your business'
+        requirements.
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
