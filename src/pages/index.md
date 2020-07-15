@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: SECURE CLOUD SOLUTIONS
+title: IT Consulting & Cloud Services
 image: /img/home-jumbotron.jpg
 heading: Customized IT services for your business
 subheading: Enterprise grade and Tailor-made for your business
