@@ -1,0 +1,23 @@
+.button {
+  white-space: nowrap;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 25px;
+  background-color: $primary;
+  font-family: $font-family-heading;
+  border-color: $primary;
+  font-size: 25px;
+  border-radius: 0;
+  color: $white;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $secondary;
+    border-color: $secondary;
+    text-decoration: none;
+  }
+}
