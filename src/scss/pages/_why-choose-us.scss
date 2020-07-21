@@ -1,0 +1,19 @@
+.why-choose-us-page {
+  .hero-text-section {
+    margin-top: -10em;
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .why-choose-us-page {
+    .hero-text-section {
+      margin-top: -3.6em;
+      margin-bottom: 0.4em;
+
+      .jumbotron > .heading-3 {
+        font-size: 36px;
+      }
+    }
+  }
+}

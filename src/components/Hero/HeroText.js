@@ -12,9 +12,11 @@ const HeroText = ({ heading, text, action }) => {
           <div className="column"></div>
           <div className="column is-three-quarters">
             <Jumbotron header={heading} paragraph={text} />
-            <div className="is-pulled-right">
-              <SCZButton text={action.text} />
-            </div>
+            {action && (
+              <div className="is-pulled-right">
+                <SCZButton text={action.text} />
+              </div>
+            )}
           </div>
         </div>
       </div>

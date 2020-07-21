@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout bodyClass="page-home">
+    <Layout bodyClass="home-page">
       <IndexPageTemplate
         image={frontmatter.image}
         hero={frontmatter.hero}
@@ -70,6 +70,7 @@ export const pageQuery = graphql`
             }
           }
         }
+
         hero {
           heading
           text
@@ -78,6 +79,7 @@ export const pageQuery = graphql`
             link
           }
         }
+
         services {
           heading
           subheading
@@ -108,29 +110,6 @@ export const pageQuery = graphql`
             text
             button
           }
-        }
-
-        title
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
         }
       }
     }

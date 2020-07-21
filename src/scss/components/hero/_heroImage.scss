@@ -1,6 +1,8 @@
 .hero-image-section {
-  .hero-image {
+  .bg-is-primary {
     background-color: $primary;
+  }
+  .hero-image {
     border-bottom: 0.8em solid $primary;
     height: 32em;
     opacity: 0.87;
