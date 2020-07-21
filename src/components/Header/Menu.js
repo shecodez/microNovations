@@ -1,18 +1,23 @@
 import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
 
-const Menu = (props) => {
-  const { menuLinks } = props.data.site.siteMetadata;
+import SocialBar from "../SocialBar";
+
+const Menu = ({ data }) => {
+  const { menuLinks } = data.site.siteMetadata;
 
   return (
-    <div id="main-menu" className="main-menu">
-      <ul>
-        {menuLinks.map((link) => (
-          <li key={link.name}>
-            <Link to={link.link}>{link.name}</Link>
-          </li>
-        ))}
-      </ul>
+    <div className="main-menu is-hidden-mobile">
+      <nav id="main-menu">
+        <ul>
+          {menuLinks.map((link) => (
+            <li key={link.name}>
+              <Link to={link.link}>{link.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <SocialBar fixed />
     </div>
   );
 };

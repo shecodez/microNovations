@@ -2,30 +2,14 @@
   background-color: $primary;
   color: $white;
 
-  .footer-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  address {
+    display: inline-block;
+  }
 
-    @include media-breakpoint-up(sm) {
-      justify-content: space-between;
-    }
-
-    address {
-      display: inline-block;
-    }
-
-    a {
-      color: $white;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    p,
-    div {
-      min-height: 25px;
-      margin-bottom: 50px;
+  a {
+    color: $white;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

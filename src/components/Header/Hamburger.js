@@ -4,30 +4,30 @@ class Hamburger extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hamburgerActive: false,
+      isActive: false,
     };
   }
 
   handleToggle = () => {
     this.setState((prevState) => ({
-      hamburgerActive: !prevState.hamburgerActive,
+      isActive: !prevState.isActive,
     }));
-    this.props.toggleMenu(this.state.hamburgerActive);
+    this.props.toggleMenu(this.state.isActive);
   };
 
   render() {
     return (
       <button
         id="toggle-main-menu-mobile"
-        className={`hamburger hamburger--slider ${
-          this.state.hamburgerActive ? "is-active" : ""
+        className={`hamburger is-hidden-tablet ${
+          this.state.isActive ? "is-active" : ""
         }`}
         type="button"
         onClick={this.handleToggle}
       >
-        <span className="hamburger-box">
-          <span className="hamburger-inner" />
-        </span>
+        <div className="menu-wrapper">
+          <div className="hamburger-menu"></div>
+        </div>
       </button>
     );
   }

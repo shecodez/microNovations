@@ -1,34 +1,28 @@
-ul.social {
-  height: inherit;
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-  svg {
-    fill: currentColor; //$black;
-    height: 16px;
-    width: 16px;
-  }
+.social-bar {
+  ul,
   li {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
-    margin-bottom: 15px;
-    &:last-of-type {
-      margin: 0;
-    }
-    a {
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: auto;
-      padding: 8px;
-      display: block;
-      span {
-        font-size: 24px;
-      }
+  }
+  ul {
+    display: flex;
+  }
+  img {
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0.5em;
+  }
+  &.is-fixed {
+    position: fixed;
+    right: 3em;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+  }
+  &.vertical {
+    ul {
+      flex-direction: column;
     }
   }
 }

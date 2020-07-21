@@ -1,0 +1,57 @@
+$color-main: $white;
+$color-active: $secondary;
+$color-link: $primary;
+
+.main-menu-mobile {
+  align-items: flex-start;
+  animation: fadeInRight 0.5s ease forwards;
+  background-color: $color-main;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    z-index: 9;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 100px 0 20px 10px;
+    li {
+      display: block;
+      padding: 1em;
+      a {
+        color: $color-link;
+        text-decoration: none;
+        font-family: $font-family-base;
+        font-size: 1em;
+        font-weight: $font-weight-thin;
+      }
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.lock-scroll {
+  overflow: hidden;
+}

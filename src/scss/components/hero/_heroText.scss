@@ -1,0 +1,23 @@
+.hero-text-section {
+  margin-top: -16em;
+  margin-bottom: 4em;
+  .jumbotron {
+    padding: 4em 6em;
+    .heading-3 {
+      font-size: 66px;
+      line-height: 1;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero-text-section {
+    margin-top: -3.6em;
+    margin-bottom: 6em;
+    .jumbotron {
+      padding: 2em 3em;
+      .heading-3 {
+        font-size: 56px;
+      }
+    }
+  }
+}

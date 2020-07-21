@@ -1,0 +1,43 @@
+.contact-form {
+  .heading-4 {
+    color: $white;
+  }
+
+  .field {
+    label {
+      color: $white;
+      text-align: justify;
+    }
+    .input,
+    .textarea {
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid $white;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $white;
+      }
+
+      // &:invalid {
+      //   background-color: rgba(255, 64, 64, 0.1);
+      //   border-color: rgb(255, 64, 64);
+      // }
+    }
+
+    ::placeholder {
+      color: $light;
+      opacity: 1; /* Firefox */
+    }
+  }
+
+  .success-message {
+    margin-top: 8px;
+    p {
+      color: #00adef;
+      letter-spacing: 0;
+      visibility: hidden;
+    }
+  }
+}

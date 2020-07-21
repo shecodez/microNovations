@@ -1,0 +1,21 @@
+.header {
+  background-color: $white;
+  color: $primary;
+  height: 128px;
+  position: relative;
+  .container {
+    align-items: center;
+    display: flex;
+    height: inherit;
+    justify-content: flex-end;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 90px;
+    .container {
+      justify-content: space-between;
+      margin: 0 2em;
+    }
+  }
+}

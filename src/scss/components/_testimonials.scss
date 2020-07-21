@@ -1,0 +1,71 @@
+.testimonial-section {
+  background-color: $light;
+  border-bottom: 0.8em solid $primary;
+  text-align: center;
+  padding: 4em 0;
+  position: relative;
+
+  .heading-4,
+  .heading-5 {
+    line-height: 1.3;
+    margin-bottom: 1.3em;
+  }
+
+  article {
+    min-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  cite {
+    color: $secondary;
+    font-style: normal;
+  }
+
+  button {
+    background-color: transparent;
+    border-color: transparent;
+    position: absolute;
+
+    img {
+      //https://codepen.io/sosuke/pen/Pjoqqp
+      filter: invert(9%) sepia(43%) saturate(5373%) hue-rotate(226deg)
+        brightness(102%) contrast(90%);
+      height: 24px;
+      width: 84px;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &.next-btn {
+      right: 8em;
+      top: 50%;
+    }
+    &.prev-btn {
+      left: 8em;
+      top: 50%;
+      transform: scaleX(-1);
+    }
+
+    &.dot {
+      background-color: $grey-light;
+      margin: 0.5em;
+      position: relative;
+      &.is-active {
+        background-color: $primary;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .testimonial-section {
+    article {
+      .heading-4 {
+        font-size: 1.4em;
+      }
+    }
+  }
+}

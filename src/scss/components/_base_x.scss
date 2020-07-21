@@ -1,0 +1,66 @@
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.heading-6 {
+  color: $primary;
+  font-family: $font-family-heading;
+}
+.heading-1 {
+  font-size: 40px;
+}
+.heading-2 {
+  font-size: 66px;
+}
+.heading-3 {
+  font-size: 55px;
+}
+.heading-4 {
+  font-size: 35px;
+  letter-spacing: 0.05em;
+}
+.heading-5 {
+  font-size: 28px;
+}
+.heading-6 {
+  font-size: 22px;
+}
+.paragraph-1,
+.paragraph-2,
+.paragraph-3 {
+  font-family: $font-family-base;
+  font-weight: $font-weight-light;
+}
+.paragraph-1 {
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  font-weight: $font-weight-bold;
+}
+.paragraph-2 {
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+}
+.paragraph-3 {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+.jc-flex-end {
+  justify-content: flex-end;
+}
+
+@include media-breakpoint-up(md) {
+  .container {
+    max-width: 980px !important;
+  }
+}

@@ -1,47 +1,69 @@
-// Font
-@import url("https://fonts.googleapis.com/css2?family=Spinnaker&display=swap");
+// Custom Vars
+@import "./variables";
+@import "./custom";
 
-@import "variables";
+// Bulma
+// Utilities
+@import "bulma/sass/utilities/_all.sass";
 
-// Mixins
-@import "mixins/breakpoints";
+// Base
+@import "bulma/sass/base/_all.sass";
 
 // Components
-@import "components/base";
+@import "bulma/sass/components/card.sass";
+@import "bulma/sass/components/level.sass";
+@import "bulma/sass/components/navbar.sass";
+
+// Helpers
+@import "bulma/sass/helpers/spacing.sass";
+@import "bulma/sass/helpers/typography.sass";
+@import "bulma/sass/helpers/visibility.sass";
+
+// Elements
+@import "bulma/sass/elements/box.sass";
+@import "bulma/sass/elements/button.sass";
+@import "bulma/sass/elements/container.sass";
+@import "bulma/sass/elements/content.sass";
+@import "bulma/sass/elements/icon.sass";
+@import "bulma/sass/elements/image.sass";
+@import "bulma/sass/elements/other.sass";
+@import "bulma/sass/elements/title.sass";
+
+// Form
+@import "bulma/sass/form/_all.sass";
+
+// Grid
+@import "bulma/sass/grid/columns.sass";
+
+// Layout
+@import "bulma/sass/layout/footer.sass";
+@import "bulma/sass/layout/hero.sass";
+@import "bulma/sass/layout/section.sass";
+
+// Custom Components
+// Contact
+@import "components/contact/contact-form";
+// Header
+@import "components/header/hamburger";
+@import "components/header/index";
+@import "components/header/logo";
+@import "components/header/main-menu";
+@import "components/header/main-menu-mobile";
+// Hero
+@import "components/hero/heroImage";
+@import "components/hero/heroText";
+// Our Services
+@import "components/services/index";
+@import "components/services/serviceItem";
+@import "components/services/serviceList";
+// Root
 @import "components/buttons";
+@import "components/cta";
 @import "components/footer";
-@import "components/hamburger";
-@import "components/header";
-@import "components/logo";
-@import "components/main-menu";
-@import "components/main-menu--mobile";
+@import "components/jumbotron";
 @import "components/page";
 @import "components/social";
-@import "components/sub-footer";
-
-// Components > Forms
-@import "components/forms/contact-form";
+@import "components/testimonials";
 
 // Pages
-@import "pages/home";
-
-// Display breakpoints for DEV
-// body:after {
-//   color: #000000;
-//   font-size: 12px;
-//   padding: 5px;
-//   font-weight: bold;
-//   right: 10px;
-//   position: fixed;
-//   text-align: center;
-//   text-transform: uppercase;
-//   bottom: 10px;
-//   width: 200px;
-//   z-index: 9999;
-//   border: solid 1px #000000;
-//   @each $name, $value in $grid-breakpoints {
-//     @include media-breakpoint-up($name) {
-//       content: "#{$name} - min-width: #{$value}";
-//     }
-//   }
-// }
+//@import "pages/home"; // TODO: transfer all media queries here

@@ -1,0 +1,15 @@
+.hero-image-section {
+  .hero-image {
+    background-color: $primary;
+    border-bottom: 0.8em solid $primary;
+    height: 32em;
+    opacity: 0.87;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero-image-section {
+    .hero-image {
+      height: 20em;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.service {
+  background-color: $light;
+  // min-height: 340px;
+  padding: 2.8em;
+  position: relative;
+  p {
+    margin: 8px 0;
+  }
+  a {
+    color: $secondary;
+    &:hover {
+      color: $primary;
+    }
+  }
+}

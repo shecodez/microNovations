@@ -1,22 +1,27 @@
 import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
 
+import SocialBar from "../SocialBar";
+
 const MenuMobile = (props) => {
   const { menuLinks } = props.data.site.siteMetadata;
 
   return (
     <div
-      id="main-menu-mobile"
-      className={`main-menu--mobile ${props.active ? "open" : ""}`}
+      className={`main-menu-mobile is-hidden-tablet ${
+        props.isActive ? "is-open" : ""
+      }`}
     >
-      <ul>
-        {menuLinks.map((link) => (
-          <li key={link.name}>
-            <Link to={link.link}>{link.name}</Link>
-          </li>
-        ))}
-      </ul>
-      {/* <SocialBar style="horizontal" /> */}
+      <nav id="main-menu-mobile">
+        <ul>
+          {menuLinks.map((link) => (
+            <li key={link.name}>
+              <Link to={link.link}>{link.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <SocialBar orientation="horizontal" />
     </div>
   );
 };
@@ -35,6 +40,6 @@ export default (props) => (
         }
       }
     `}
-    render={(data) => <MenuMobile active={props.active} data={data} />}
+    render={(data) => <MenuMobile isActive={props.isActive} data={data} />}
   />
 );

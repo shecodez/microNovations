@@ -1,33 +1,33 @@
 import React from "react";
 
 import useSiteMetadata from "../SiteMetadata";
-import ContactForm from "../Forms/ContactForm";
-import Copyright from "./Copyright";
+import ContactForm from "../Contact/Form";
 
 const Footer = () => {
-  const { contact } = useSiteMetadata();
+  const { title, contact } = useSiteMetadata();
   const { email, phone } = contact;
   const { street, city, state, zipCode } = contact.address;
 
   return (
-    <div className="footer">
-      <section className="container">
+    <footer className="footer">
+      <div className="container">
         <ContactForm />
-
-        <div className="footer-text">
-          <div className="address paragraph-2">
+        <div className="level mt-5 mx-5 paragraph-2 has-text-centered-mobile">
+          <div className="address">
             Address.{" "}
             <address>{`${street} ${city} ${state} ${zipCode}`}</address>
           </div>
-          <p className="tel paragraph-2">Tel. {phone}</p>
-          <p className="email paragraph-2">
+          <p className="tel">Tel. {phone}</p>
+          <p className="email">
             Email. <a href={`mailto:${email}`}>{email}</a>
           </p>
         </div>
-
-        <Copyright />
-      </section>
-    </div>
+        <div className="level mt-5 mx-5 has-text-centered-mobile">
+          <p className="copyright paragraph-3">{`© ${new Date().getFullYear()} ${title}`}</p>
+          <button className="button">^</button>
+        </div>
+      </div>
+    </footer>
   );
 };
 

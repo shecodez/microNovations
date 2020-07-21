@@ -5,8 +5,8 @@ import Hamburger from "./Hamburger";
 import Menu from "./Menu";
 import MenuMobile from "./MenuMobile";
 
-import logo from "../../images/logo.svg";
-import logoMobile from "../../images/logo-mobile.svg";
+import logo from "../../images/mN_logo.png";
+import logoMobile from "../../images/mN_logo_mobile.png";
 
 class Header extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class Header extends React.Component {
     };
   }
 
-  toggleMenu = (mobileMenuActive) => {
+  toggleMenu = () => {
     this.setState((prevState) => ({
       mobileMenuActive: !prevState.mobileMenuActive,
     }));
@@ -24,23 +24,23 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div className="header">
+      <header className="header">
+        <div className="logo logo-fixed is-hidden-mobile">
+          <Link to="/">
+            <img alt="microNovations Homepage" src={logo} />
+          </Link>
+        </div>
         <div className="container">
-          <div className="logo">
-            <Link to="/">
-              <img alt="microNovations Homepage" src={logo} />
-            </Link>
-          </div>
-          <div className="logo-mobile">
+          <div className="logo logo-mobile is-hidden-tablet">
             <Link to="/">
               <img alt="microNovations Homepage" src={logoMobile} />
             </Link>
           </div>
-          <MenuMobile active={this.state.mobileMenuActive} />
           <Menu />
+          <MenuMobile isActive={this.state.mobileMenuActive} />
           <Hamburger toggleMenu={this.toggleMenu} />
         </div>
-      </div>
+      </header>
     );
   }
 }

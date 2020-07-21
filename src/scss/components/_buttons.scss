@@ -1,13 +1,14 @@
 .button {
   white-space: nowrap;
   display: inline-block;
-  height: 40px;
-  line-height: 40px;
+  height: 52px;
+  line-height: 52px;
   padding: 0 25px;
   background-color: $primary;
-  font-family: $font-family-heading;
+  font-family: $font-family-base;
+  font-weight: $font-weight-thin;
   border-color: $primary;
-  font-size: 25px;
+  font-size: 17px;
   border-radius: 0;
   color: $white;
   text-decoration: none;
@@ -19,5 +20,41 @@
     background-color: $secondary;
     border-color: $secondary;
     text-decoration: none;
+  }
+
+  &.icon-btn {
+    padding: 0;
+    width: 52px;
+    max-width: 52px;
+  }
+
+  &.link-btn {
+    height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    font-family: $font-family-heading;
+  }
+
+  &.primary-btn {
+    color: $white;
+    background-color: $primary;
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $secondary;
+      border-color: $secondary;
+    }
+  }
+
+  &.secondary-btn {
+    color: $white;
+    background-color: $secondary;
+    border-color: $secondary;
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $primary;
+      border-color: $primary;
+    }
   }
 }
