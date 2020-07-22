@@ -1,0 +1,19 @@
+---
+templateKey: "service-post"
+title: "Network Solutions"
+description: >-
+  A computer network is a group of computers that use a set of common communication protocols over digital interconnections for the purpose of sharing resources located on or provided by the network nodes
+---
+
+A computer network is a group of two or more computers that are linked together. Networks are usually used to share resources, exchange files or communicate with other users.
+A network is a set of nodes connected by communication links. A node can be a computer, printer, or any other device capable of sending or receiving data from the other node through the network.
+
+Other devices are often needed for the network to work correctly. Examples for such devices include hubs and switches. Different kinds of network can be connected to each other with a router. In general, networks that use cables to connect can operate at higher speeds than those using wireless technology.
+
+A Local Area Network (LAN) connects computers which are close together. Building a LAN is easier than connecting different networks (by a Wide Area Network). The largest Wide Area Network is the Internet.
+
+Computers can be part of several different networks. Networks can also be parts of bigger networks. The local area network in a small business is usually connected to the corporate network of the larger company. These connections may allow access to the Internet. For example, a shop may use it to show merchandise on its Web site through a web server, or to convert received orders into shipping instructions.
+
+A network must be connected with appropriate hardware. This can be wired or wireless. For a simple LAN, computers, media and peripherals are sufficient. WANs (wide area networks) and some large LANs (local area networks) need some additional devices like a bridge, gateway or router to connect different small or large networks.
+
+A network needs a communication protocol. Microsoft Windows, Linux and most other operating systems use TCP/IP. Apple Macintosh computers used Appletalk in the 20th century, but use TCP/IP now.

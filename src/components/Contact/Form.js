@@ -36,7 +36,7 @@ export default class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className="contact-form mx-5 text-center">
+      <section id="contact-us" className="contact-form mx-5 text-center">
         <h4 className="heading-4 mb-6">Contact Us</h4>
 
         <form
@@ -117,7 +117,7 @@ export default class ContactForm extends React.Component {
         <div className="success-message">
           <p className="paragraph-2">Thanks for submitting!</p>
         </div>
-      </div>
+      </section>
     );
   }
 }

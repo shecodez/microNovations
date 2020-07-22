@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: "microNovations",
@@ -24,7 +28,7 @@ module.exports = {
       },
       {
         name: "Our Services",
-        link: "/#it-services",
+        link: "/#our-services",
       },
       {
         name: "Support",
@@ -105,5 +109,14 @@ module.exports = {
       },
     }, // must be after other CSS plugins
     "gatsby-plugin-netlify", // make sure to keep it last in the array
+    {
+      resolve: "gatsby-plugin-crisp-chat",
+      options: {
+        websiteId: process.env.GATSBY_CRISP_WEBSITE_ID,
+        enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
+        defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
+        enableImprovedAccessibility: false, // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
+      },
+    },
   ],
 };

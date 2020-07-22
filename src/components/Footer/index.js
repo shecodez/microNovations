@@ -2,6 +2,7 @@ import React from "react";
 
 import useSiteMetadata from "../SiteMetadata";
 import ContactForm from "../Contact/Form";
+import { scrollToTop } from "../../utils";
 
 const Footer = () => {
   const { title, contact } = useSiteMetadata();
@@ -24,7 +25,9 @@ const Footer = () => {
         </div>
         <div className="level mt-5 mx-5 has-text-centered-mobile">
           <p className="copyright paragraph-3">{`© ${new Date().getFullYear()} ${title}`}</p>
-          <button className="button">^</button>
+          <button className="button icon-btn" onClick={scrollToTop}>
+            ^
+          </button>
         </div>
       </div>
     </footer>

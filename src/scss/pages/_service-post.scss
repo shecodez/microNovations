@@ -1,0 +1,52 @@
+.service-post-page {
+  background-color: $light;
+  .hero {
+    height: 10em;
+  }
+  .service-jumbotron {
+    background-color: $white;
+    color: $primary;
+    margin-bottom: 5em;
+    margin-top: -6em;
+    padding: 3em 6em;
+    position: relative;
+    h2 {
+      max-width: 60%;
+      line-height: 1;
+    }
+
+    .scz-border-frame {
+      border-color: $white;
+    }
+  }
+  .column.is-10 {
+    a {
+      color: $secondary;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .service-post-page {
+    .hero {
+      height: 6em;
+    }
+    .service-jumbotron {
+      margin-bottom: 2em;
+      margin-top: -3em;
+      padding: 1em 2em;
+      position: relative;
+      h2 {
+        font-size: 56px;
+        line-height: 1;
+        max-width: 60%;
+      }
+    }
+    .scz-line {
+      max-width: 20%;
+    }
+  }
+}

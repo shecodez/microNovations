@@ -1,0 +1,22 @@
+.support-page {
+  .hero-image {
+    background-attachment: fixed;
+  }
+  .hero-text-section {
+    margin-top: -10em;
+    margin-bottom: 4em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .support-page {
+    .hero-text-section {
+      margin-top: -3.6em;
+      margin-bottom: 0.4em;
+
+      .jumbotron > .heading-3 {
+        font-size: 36px;
+      }
+    }
+  }
+}
