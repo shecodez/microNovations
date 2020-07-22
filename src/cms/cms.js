@@ -1,16 +1,16 @@
-import CMS from 'netlify-cms-app'
-import uploadcare from 'netlify-cms-media-library-uploadcare'
-import cloudinary from 'netlify-cms-media-library-cloudinary'
+import CMS from "netlify-cms-app";
+import uploadcare from "netlify-cms-media-library-uploadcare";
+import cloudinary from "netlify-cms-media-library-cloudinary";
 
-import AboutPagePreview from './preview-templates/AboutPagePreview'
-import BlogPostPreview from './preview-templates/BlogPostPreview'
-import ProductPagePreview from './preview-templates/ProductPagePreview'
-import IndexPagePreview from './preview-templates/IndexPagePreview'
+import IndexPagePreview from "./preview-templates/IndexPagePreview";
+import ServicePostPreview from "./preview-templates/ServicePostPreview";
+import SuportPagePreview from "./preview-templates/SupportPagePreview";
+import WhyChooseUsPagePreview from "./preview-templates/WhyChooseUsPagePreview";
 
-CMS.registerMediaLibrary(uploadcare)
-CMS.registerMediaLibrary(cloudinary)
+CMS.registerMediaLibrary(uploadcare);
+CMS.registerMediaLibrary(cloudinary);
 
-CMS.registerPreviewTemplate('index', IndexPagePreview)
-CMS.registerPreviewTemplate('about', AboutPagePreview)
-CMS.registerPreviewTemplate('products', ProductPagePreview)
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
+CMS.registerPreviewTemplate("index", IndexPagePreview);
+CMS.registerPreviewTemplate("service", ServicePostPreview);
+CMS.registerPreviewTemplate("products", SuportPagePreview);
+CMS.registerPreviewTemplate("blog", WhyChooseUsPagePreview);
