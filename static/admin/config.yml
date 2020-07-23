@@ -12,6 +12,22 @@ media_folder: static/images/uploads
 public_folder: /images/uploads
 
 collections:
+  - name: "services"
+    label: "Services"
+    folder: "src/pages/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "service-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "settings"
     label: "Settings"
     files:
