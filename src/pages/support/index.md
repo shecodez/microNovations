@@ -1,8 +1,8 @@
 ---
 templateKey: support-page
 path: /support
+image: /img/cityscape2.png
 title: IT Support for your business
-image: /img/cityscape.jpg
 ---
 
 ### Agriculture
