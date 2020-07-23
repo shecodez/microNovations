@@ -112,7 +112,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-crisp-chat",
       options: {
-        websiteId: process.env.GATSBY_CRISP_WEBSITE_ID,
+        websiteId: process.env.CRISP_WEBSITE_ID,
         enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
         defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
         enableImprovedAccessibility: false, // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.

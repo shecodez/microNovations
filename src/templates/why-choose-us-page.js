@@ -20,11 +20,9 @@ export const WhyChooseUsPageTemplate = ({
       <HeroImage image={image} />
       <HeroText heading={title} />
       <div className="container mb-6">
-        <div className="columns">
+        <div className="columns is-mobile">
           <div className="column is-10 is-offset-1">
-            <div className="section">
-              <PageContent className="content" content={content} />
-            </div>
+            <PageContent className="content" content={content} />
           </div>
         </div>
       </div>
