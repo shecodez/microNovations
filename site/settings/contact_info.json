@@ -1,0 +1,12 @@
+{
+  "phone": "+1(844)225-6831",
+  "email": "info@micronovations.com",
+  "hours": "M-F 9AM - 5PM",
+  "address": {
+    "street": "PO Box ???",
+    "city": "Macon",
+    "state": "GA",
+    "zipCode": "?????"
+  },
+  "name": "microNovations"
+}
