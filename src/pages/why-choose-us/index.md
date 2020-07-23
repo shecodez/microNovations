@@ -1,8 +1,8 @@
 ---
 templateKey: why-choose-us-page
 path: /why-choose-us
+image: /img/servers.jpg
 title: Why Choose microNovations?
-image: /img/cityscape.jpg
 ---
 
 ### Who We Are
