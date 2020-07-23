@@ -1,25 +1,21 @@
 ---
 templateKey: index-page
 testimonialsx:
-  list:
-    - quote:
-        “I'm a testimonial. Click to edit me and add text that says something
-        nice about you and your services.”
-      author:
-        name: Jason H. Winds
-        title: CEO of ML Associates
-    - quote:
-        “I'm a testimonial. Click to edit me and add text that says something
-        nice about you and your services.”
-      author:
-        name: Martha Davison
-        title: Senior VP of Hardy Construction
-    - quote:
-        “I'm a testimonial. Click to edit me and add text that says something
-        nice about you and your services.”
-      author:
-        name: Manny Rodiguez
-        title: Executive Director of Kalos Inc.
+  - quote: “I'm a testimonial. Click to edit me and add text that says something
+      nice about you and your services.”
+    author:
+      name: Jason H. Winds
+      title: CEO of ML Associates
+  - quote: “I'm a testimonial. Click to edit me and add text that says something
+      nice about you and your services.”
+    author:
+      name: Martha Davison
+      title: Senior VP of Hardy Construction
+  - quote: “I'm a testimonial. Click to edit me and add text that says something
+      nice about you and your services.”
+    author:
+      name: Manny Rodiguez
+      title: Executive Director of Kalos Inc.
 
 cta:
   heading: Ready to find out more?

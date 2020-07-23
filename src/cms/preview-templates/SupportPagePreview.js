@@ -27,4 +27,4 @@ SupportPagePreview.propTypes = {
   widgetFor: PropTypes.func,
 };
 
-export default WhyChooseUsPagePreview;
+export default SupportPagePreview;

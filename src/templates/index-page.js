@@ -20,7 +20,7 @@ export const IndexPageTemplate = ({
     <HeroImage image={image} />
     <HeroText heading={hero.heading} text={hero.text} action={hero.action} />
     <OurServices services={services} />
-    <Testimonials testimonials={testimonials.list} />
+    <Testimonials testimonials={testimonials} />
     <CTA heading={cta.heading} text={cta.text} action={cta.action} />
   </main>
 );
@@ -29,7 +29,7 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   hero: PropTypes.object,
   services: PropTypes.object,
-  testimonials: PropTypes.object,
+  testimonials: PropTypes.array,
   cta: PropTypes.object,
 };
 
@@ -94,12 +94,10 @@ export const pageQuery = graphql`
         }
 
         testimonialsx {
-          list {
-            quote
-            author {
-              name
-              title
-            }
+          quote
+          author {
+            name
+            title
           }
         }
 
