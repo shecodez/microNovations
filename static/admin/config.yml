@@ -42,7 +42,7 @@ collections:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Phone", name: "phone", widget: "string" }
-          - { label: "Hours", name: "hours", widget: "string" }
+          - { label: "Business Hours", name: "businessHours", widget: "string" }
           - label: "Address"
             name: "address"
             widget: "object"
@@ -83,35 +83,6 @@ collections:
                 ],
             }
           - {
-              label: CTA,
-              name: cta,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Text, name: text, widget: text },
-                ],
-            }
-          - {
-              label: Testimonials,
-              name: testimonials,
-              widget: list,
-              fields:
-                [
-                  { label: Quote, name: quote, widget: text },
-                  {
-                    label: Author,
-                    name: author,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Name, name: name, widget: string },
-                        { label: Title, name: title, widget: string },
-                      ],
-                  },
-                ],
-            }
-          - {
               label: Services,
               name: services,
               widget: object,
@@ -142,6 +113,37 @@ collections:
                 ],
             }
 
+          - {
+              label: Testimonials,
+              name: testimonials,
+              widget: list,
+              fields:
+                [
+                  { label: Quote, name: quote, widget: text },
+                  {
+                    label: Author,
+                    name: author,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Name, name: name, widget: string },
+                        { label: Title, name: title, widget: string },
+                      ],
+                  },
+                ],
+            }
+          
+           - {
+              label: CTA,
+              name: cta,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Text, name: text, widget: text },
+                ],
+            }
+          
       - file: "src/pages/why-choose-us/index.md"
         label: "Why Choose Us"
         name: "why-choose-us"
