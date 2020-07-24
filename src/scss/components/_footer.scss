@@ -12,4 +12,13 @@
       text-decoration: underline;
     }
   }
+
+  .page-top {
+    background-color: transparent;
+    border-color: transparent;
+    filter: invert(1);
+    height: 15px;
+    transform: scaleY(-1);
+    width: 26px;
+  }
 }

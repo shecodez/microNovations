@@ -36,6 +36,9 @@ $color-link: $primary;
         font-family: $font-family-base;
         font-size: 1em;
         font-weight: $font-weight-thin;
+        &.active {
+          color: $secondary;
+        }
       }
     }
   }

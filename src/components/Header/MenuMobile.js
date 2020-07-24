@@ -16,7 +16,9 @@ const MenuMobile = (props) => {
         <ul>
           {menuLinks.map((link) => (
             <li key={link.name}>
-              <Link to={link.link}>{link.name}</Link>
+              <Link to={link.link} activeClassName="active">
+                {link.name}
+              </Link>
             </li>
           ))}
         </ul>
