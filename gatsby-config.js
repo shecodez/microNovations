@@ -5,18 +5,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "microNovations",
+    titleTemplate: "%s · microNovations",
     description: "microNovations - IT Consulting and Cloud Services.",
-    contact: {
-      phone: "+1(844)225-6831",
-      email: "info@micronovations.com",
-      businessHours: "M-F 9AM - 5PM",
-      address: {
-        street: "PO Box ???",
-        city: "Macon",
-        state: "GA",
-        zipCode: "?????",
-      },
-    },
+    url: "https://www.micronovations.com", // No trailing slash allowed!
+    image: "/images/favicon.png", // Path to image placed in the 'static' folder
+    twitterUsername: "@micronovations",
     menuLinks: [
       {
         name: "Home",

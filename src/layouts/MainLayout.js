@@ -22,3 +22,14 @@ const MainLayout = (props) => {
 };
 
 export default MainLayout;
+
+/*
+const { title, description = 'nothin’', image, path, article = false } = props.seo
+<SEO
+  title={post.frontmatter.title}
+  description={post.frontmatter.description || post.excerpt || 'nothin’'}
+  image={post.frontmatter.image.childImageSharp.sizes.src}
+  pathname={post.fields.slug}
+  article
+/>
+*/

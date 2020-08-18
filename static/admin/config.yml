@@ -53,6 +53,18 @@ collections:
               - { label: "City", name: "city", widget: "string" }
               - { label: "State", name: "state", widget: "string" }
               - { label: "Zip Code", name: "zipCode", widget: "string" }
+          - {
+              label: Social Media,
+              name: socialMediaLinks,
+              widget: list,
+              fields:
+                [
+                  {label: Type, name: type, widget: string }
+                  { label: Icon, name: icon, widget: string, required: false }
+                  { label: Username, name: username, widget: string }                 
+                  { label: Link, name: link, widget: string }
+                ],
+            }
 
   - name: "pages"
     label: "Pages"
