@@ -1,8 +1,11 @@
 ---
 templateKey: "service-post"
+seo:
+  browserTitle: Cloud Solutions ~ Services | microNovations
+  description: >-
+    Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user.
+  title: Cloud Solutions ~ Services | microNovations
 title: "Cloud Solutions"
-description: >-
-  Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user.
 ---
 
 Cloud computing is when computing services are provided by a company or place outside of where they are being used. It is like the way in which electricity is sent to users: they simply use the electricity that is sent to them and do not need to worry where the electricity is from or how it is made and brought to them. Every month, they pay only for what they used and nothing more. The idea behind cloud computing is similar: The user can simply use storage, computing power, or development environments, without having to worry how they work behind the scenes.

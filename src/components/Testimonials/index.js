@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { v4 } from "uuid";
 import { useEmblaCarousel } from "embla-carousel/react";
 
-import rightArrowSVG from "../../images/right-arrow.svg";
+import rightArrowSVG from "../../img/right-arrow.svg";
 
 const Testimonials = (props) => {
   const [EmblaCarouselReact, embla] = useEmblaCarousel({

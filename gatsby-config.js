@@ -5,33 +5,6 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "microNovations",
-    titleTemplate: "%s · microNovations",
-    description: "microNovations - IT Consulting and Cloud Services.",
-    url: "https://www.micronovations.com", // No trailing slash allowed!
-    image: "/images/favicon.png", // Path to image placed in the 'static' folder
-    twitterUsername: "@micronovations",
-    menuLinks: [
-      {
-        name: "Home",
-        link: "/",
-      },
-      {
-        name: "Why Choose Us",
-        link: "/why-choose-us",
-      },
-      {
-        name: "Our Services",
-        link: "/#our-services",
-      },
-      {
-        name: "Support",
-        link: "/support",
-      },
-      {
-        name: "Contact Us",
-        link: "/#contact-us",
-      },
-    ],
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -93,16 +66,21 @@ module.exports = {
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
-    },
-    {
+    }, // must be after other CSS plugins
+    /*{
       resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
         purgeOnly: ["/all.sass"], // applies purging only on the bulma css file
       },
-    }, // must be after other CSS plugins
-    "gatsby-plugin-netlify", // make sure to keep it last in the array
+    },
     {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/img/favicon.png",
+      },
+    },
+    */ {
       resolve: "gatsby-plugin-crisp-chat",
       options: {
         websiteId: process.env.CRISP_WEBSITE_ID,
@@ -111,5 +89,6 @@ module.exports = {
         enableImprovedAccessibility: false, // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
       },
     },
+    "gatsby-plugin-netlify", // make sure to keep it last in the array
   ],
 };

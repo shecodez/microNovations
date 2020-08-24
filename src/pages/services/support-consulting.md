@@ -1,8 +1,11 @@
 ---
 templateKey: "service-post"
+seo:
+  browserTitle: Support Consulting ~ Services | microNovations
+  description: >-
+    In management, information technology consulting as a field of activity focuses on advising organizations on how best to use information technology in achieving their business objectives
+  title: Support Consulting ~ Services | microNovations
 title: "Support Consulting"
-description: >-
-  In management, information technology consulting as a field of activity focuses on advising organizations on how best to use information technology in achieving their business objectives
 ---
 
 Once a business owner defined the needs to take a business to the next level, a decision maker will define a scope, cost and a time frame of the project. The role of the IT consultancy company is to support and nurture the company from the very beginning of the project until the end, and deliver the project not only in the scope, time and cost but also with complete customer satisfaction.

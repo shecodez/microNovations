@@ -1,8 +1,8 @@
 import React from "react";
 
-import facebook from "../img/social/facebook.svg";
-import linkedin from "../img/social/instagram.svg";
-import twitter from "../img/social/twitter.svg";
+import facebook from "../images/social/facebook.svg";
+import linkedin from "../images/social/linkedin.svg";
+import twitter from "../images/social/twitter.svg";
 
 const SocialBar = ({ orientation = "vertical", fixed = false }) => (
   <div className={`social-bar ${fixed ? "is-fixed" : ""} ${orientation}`}>

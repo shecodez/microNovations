@@ -1,8 +1,11 @@
 ---
 templateKey: "service-post"
+seo:
+  browserTitle: Network Solutions ~ Services | microNovations
+  description: >-
+    A computer network is a group of computers that use a set of common communication protocols over digital interconnections for the purpose of sharing resources located on or provided by the network nodes
+  title: Network Solutions ~ Services | microNovations
 title: "Network Solutions"
-description: >-
-  A computer network is a group of computers that use a set of common communication protocols over digital interconnections for the purpose of sharing resources located on or provided by the network nodes
 ---
 
 A computer network is a group of two or more computers that are linked together. Networks are usually used to share resources, exchange files or communicate with other users.

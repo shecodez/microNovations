@@ -1,8 +1,11 @@
 ---
 templateKey: "service-post"
+seo:
+  browserTitle: Disaster Recovery ~ Services | microNovations
+  description: >-
+    Disaster Recovery involves a set of policies, tools and procedures to enable the recovery or continuation of vital technology infrastructure and systems following a natural or human-induced disaster.
+  title: Disaster Recovery ~ Services | microNovations
 title: "Disaster Recovery"
-description: >-
-  Disaster Recovery involves a set of policies, tools and procedures to enable the recovery or continuation of vital technology infrastructure and systems following a natural or human-induced disaster.
 ---
 
 ### Key Elements of a Disaster Recovery Plan (DRP)

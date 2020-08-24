@@ -54,50 +54,85 @@ collections:
               - { label: "State", name: "state", widget: "string" }
               - { label: "Zip Code", name: "zipCode", widget: "string" }
           - {
-              label: Social Media,
-              name: socialMediaLinks,
+              label: Social Links,
+              name: socialLinks,
               widget: list,
               fields:
                 [
-                  {label: Type, name: type, widget: string }
-                  { label: Icon, name: icon, widget: string, required: false }
-                  { label: Username, name: username, widget: string }                 
-                  { label: Link, name: link, widget: string }
+                  { label: Label, name: label, widget: string }
+                  { label: Icon, name: icon, widget: image, required: false },                
+                  { label: Link URL, name: linkURL, widget: string }
                 ],
             }
 
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/index.md"
-        label: "Landing Page"
+      - file: "src/pages/home/index.md"
+        label: "Home Page"
         name: "index"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "index-page",
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page" }
+          - { 
+              label: Header Image, 
+              name: headerImage, 
+              widget: object,
+              fields: 
+                [
+                  { label: "Image", name: "image", "image" },
+                  { label: "Image Description", name: "imageAlt", widget: "string" }
+                ] 
             }
-          - { label: Image, name: image, widget: image }
           - {
-              label: Hero,
-              name: hero,
+              label: Call To Actions,
+              name: CTAs,
               widget: object,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Text, name: text, widget: text },
                   {
-                    label: Action,
-                    name: action,
+                    label: First CTA,
+                    name: firstCTA,
                     widget: object,
                     fields:
                       [
-                        { label: Text, name: text, widget: string },
-                        { label: Link, name: link, widget: string },
+                        { label: Heading, name: heading, widget: string },
+                        { label: Text, name: text, widget: text },
+                        {
+                          label: "Link Type",
+                          name: "linkType",
+                          widget: "select",
+                          options: ["internal", "external"]
+                        }
+                        {
+                          label: Link URL,
+                          name: linkURL,
+                          widget: string,
+                          hint: "Use a relative URL (e.g. /about) if the link is an internal link."
+                        },
                       ],
                   },
+                  {
+                    label: Second CTA,
+                    name: secondCTA,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Heading, name: heading, widget: string },
+                        { label: Text, name: text, widget: text },
+                        {
+                          label: "Link Type",
+                          name: "linkType",
+                          widget: "select",
+                          options: ["internal", "external"]
+                        }
+                        {
+                          label: Link URL,
+                          name: linkURL,
+                          widget: string,
+                          hint: "Use a relative URL (e.g. /about) if the link is an internal link."
+                        },
+                      ],
+                  }
                 ],
             }
           - {
@@ -149,27 +184,17 @@ collections:
                   },
                 ],
             }
-          - {
-              label: CTA,
-              name: cta,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Text, name: text, widget: text },
-                  {
-                    label: Action,
-                    name: action,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Text, name: text, widget: string },
-                        { label: Button, name: button, widget: string },
-                      ],
-                  },
-                ],
+          - { 
+              label: "SEO & Meta", 
+              name: "seo", 
+              widget: "object", 
+              fields: 
+                [ 
+                  { label: "Browser Tab Title", name: "browserTitle", widget: "string" }, 
+                  { label: "Title", name: "title", widget: "string" }, 
+                  { label: "Description", name: "description", widget: "string" }
+                ]
             }
-
       - file: "src/pages/why-choose-us/index.md"
         label: "Why Choose Us"
         name: "why-choose-us"
@@ -183,6 +208,17 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - { 
+              label: "SEO & Meta", 
+              name: "seo", 
+              widget: "object", 
+              fields: 
+                [ 
+                  { label: "Browser Tab Title", name: "browserTitle", widget: "string" }, 
+                  { label: "Title", name: "title", widget: "string" }, 
+                  { label: "Description", name: "description", widget: "string" }
+                ]
+            }
 
       - file: "src/pages/support/index.md"
         label: "Support"
@@ -197,3 +233,60 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - { 
+              label: "SEO & Meta", 
+              name: "seo", 
+              widget: "object", 
+              fields: 
+                [ 
+                  { label: "Browser Tab Title", name: "browserTitle", widget: "string" }, 
+                  { label: "Title", name: "title", widget: "string" }, 
+                  { label: "Description", name: "description", widget: "string" }
+                ]
+            }
+
+  - name: "navbarAndFooter"
+    label: "Navbar & Footer"
+    files:
+      - file: "src/pages/partials/navbar/index.md"
+        label: "Navbar"
+        name: "navbar"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "navbar" }
+          - {
+              label: "Navbar Logo",
+              name: "navbarLogo",
+              widget: "object",
+              fields: 
+                [
+                  { label: "Image", name: "image", widget: "image" },
+                  { label: "Image Description", name: "imageAlt", widget: "string" },                
+                ]
+            }
+          - {
+              label: "Menu Items",
+              name: "menuItems",
+              widget: "list",
+              fields: 
+                [
+                  { label: "Label", name: "label", widget: "string" },
+                  { label: "Link Type", name: "linkType", widget: "select", options: ["internal", "external"] },
+                  { label: "Link URL", name: "linkURL", widget: "string", hint: "Use a relative URL (i.e. /about) if the link is an internal link." }
+                ]
+            }
+      - file: "src/pages/partials/footer/index.md"
+        label: "Footer"
+        name: "footer"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "navbar" }
+          - {
+              label: "Menu Items",
+              name: "menuItems",
+              widget: "list",
+              fields: 
+                [
+                  { label: "Label", name: "label", widget: "string" },
+                  { label: "Link Type", name: "linkType", widget: "select", options: ["internal", "external"] },
+                  { label: "Link URL", name: "linkURL", widget: "string", hint: "Use a relative URL (i.e. /about) if the link is an internal link." }
+                ]
+            }

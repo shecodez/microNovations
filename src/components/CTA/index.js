@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Jumbotron from "../Jumbotron";
-import SCZButton from "../SCZButton";
+import CustomButton from "../CustomButton";
 
 const CTA = ({ heading, text, action }) => {
   return (
@@ -11,7 +11,7 @@ const CTA = ({ heading, text, action }) => {
         <div>
           <Jumbotron header={heading} paragraph={text} />
           <div className="is-pulled-right">
-            <SCZButton text={action.text} />
+            <CustomButton text={action.text} />
           </div>
         </div>
       </div>

@@ -2,6 +2,10 @@
 templateKey: support-page
 path: /support
 image: /img/cityscape2.png
+seo:
+  browserTitle: Support | microNovations
+  description: microNovations - IT Consulting and Cloud Services
+  title: Support | microNovations
 title: IT Support for your business
 ---
 

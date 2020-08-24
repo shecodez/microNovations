@@ -1,8 +1,11 @@
 ---
 templateKey: "service-post"
+seo:
+  browserTitle: Managed IT Services ~ Services | microNovations
+  description: >-
+    IT service management (ITSM) is the activities that are performed by an organization to design, plan, deliver, operate and control information technology (IT) services offered to customers.
+  title: Managed IT Services ~ Services | microNovations
 title: "Managed IT Services"
-description: >-
-  IT service management (ITSM) is the activities that are performed by an organization to design, plan, deliver, operate and control information technology (IT) services offered to customers.
 ---
 
 Systems management refers to enterprise-wide administration of distributed systems including (and commonly in practice) computer systems.[citation needed] Systems management is strongly influenced by network management initiatives in telecommunications. The application performance management (APM) technologies are now a subset of Systems management. Maximum productivity can be achieved more efficiently through event correlation, system automation and predictive analysis which is now all part of APM.

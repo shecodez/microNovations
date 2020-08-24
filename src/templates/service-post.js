@@ -1,24 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
+import Helmet from "react-helmet";
 
-import Layout from "../layouts/MainLayout";
-import Content, { HTMLContent } from "../components/Content";
+import Layout from "../components/Layout";
+import HTMLContent from "../components/Content";
 
-export const ServicePostTemplate = ({
-  content,
-  contentComponent,
-  description,
-  title,
-  helmet,
-}) => {
-  const ServiceContent = contentComponent || Content;
+export const ServicePostTemplate = ({ content, contentComponent, title }) => {
+  const ServiceContent = contentComponent;
 
   return (
-    <main>
-      {helmet || ""}
-      <div class="hero is-primary"></div>
+    <div className="service-post-page">
+      <div className="hero is-primary"></div>
       <div className="container mb-4">
         <div className="columns is-centered is-mobile">
           <div className="column is-10">
@@ -38,7 +31,7 @@ export const ServicePostTemplate = ({
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 
@@ -46,29 +39,28 @@ ServicePostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   title: PropTypes.string,
-  description: PropTypes.string,
-  helmet: PropTypes.object,
 };
 
 const ServicePost = ({ data }) => {
   const { markdownRemark: post } = data;
+  const {
+    frontmatter: {
+      seo: { title: seoTitle, description: seoDescription, browserTitle },
+    },
+  } = post;
+  const { footerData, navbarData } = data;
 
   return (
-    <Layout bodyClass="service-post-page">
+    <Layout footerData={footerData} navbarData={navbarData}>
+      <Helmet>
+        <meta name="title" content={seoTitle} />
+        <meta name="description" content={seoDescription} />
+        <title>{browserTitle}</title>
+      </Helmet>
       <ServicePostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        helmet={
-          <Helmet titleTemplate="%s | Our Services">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
         title={post.frontmatter.title}
-        description={post.frontmatter.description}
       />
     </Layout>
   );
@@ -84,12 +76,17 @@ export default ServicePost;
 
 export const pageQuery = graphql`
   query ServicePostByID($id: String!) {
+    ...LayoutFragment
     markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
         title
-        description
+        seo {
+          browserTitle
+          title
+          description
+        }
       }
     }
   }

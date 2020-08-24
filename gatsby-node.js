@@ -16,7 +16,7 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
-              tags
+              path
               templateKey
             }
           }
@@ -29,43 +29,37 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
+    // Filter out the footer, navbar, and services so we don't create pages for those
+    const postOrPage = result.data.allMarkdownRemark.edges.filter((edge) => {
+      switch (edge.node.frontmatter.templateKey) {
+        case "navbar":
+        case "footer":
+          return false;
 
-    posts.forEach((edge) => {
+        default:
+          return true; //!Boolean(edge.node.fields.slug.match(/^\/services\/.*$/));
+      }
+    });
+
+    postOrPage.forEach((edge) => {
+      let component, pathname;
+      if (edge.node.frontmatter.templateKey === "home-page") {
+        pathname = "/";
+        component = path.resolve(`src/pages/index.js`);
+      } else {
+        pathname = edge.node.frontmatter.path || edge.node.fields.slug;
+        component = path.resolve(
+          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+        );
+      }
       const id = edge.node.id;
       createPage({
-        path: edge.node.fields.slug,
+        path: pathname,
         tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
+        component,
         // additional data can be passed via context
         context: {
           id,
-        },
-      });
-    });
-
-    // Tag pages:
-    let tags = [];
-    // Iterate through each post, putting all found tags into `tags`
-    posts.forEach((edge) => {
-      if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags);
-      }
-    });
-    // Eliminate duplicate tags
-    tags = _.uniq(tags);
-
-    // Make tag pages
-    tags.forEach((tag) => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`;
-
-      createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
-        context: {
-          tag,
         },
       });
     });

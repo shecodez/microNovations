@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Jumbotron from "../Jumbotron";
-import SCZButton from "../SCZButton";
+import CustomButton from "../CustomButton";
 
 const HeroText = ({ heading, text, action }) => {
   return (
@@ -14,7 +14,7 @@ const HeroText = ({ heading, text, action }) => {
             <Jumbotron header={heading} paragraph={text} />
             {action && (
               <div className="is-pulled-right">
-                <SCZButton text={action.text} />
+                <CustomButton text={action.text} />
               </div>
             )}
           </div>

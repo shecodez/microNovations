@@ -2,6 +2,10 @@
 templateKey: why-choose-us-page
 path: /why-choose-us
 image: /img/servers.jpg
+seo:
+  browserTitle: Why Choose | microNovations
+  description: microNovations - IT Consulting and Cloud Services
+  title: Why Choose | microNovations
 title: Why Choose microNovations?
 ---
 
